@@ -1,14 +1,14 @@
 <resources>
 
-    <string name="app_name">Market Plan</string>
+    <string name="app_name">Supermarket Plan</string>
     <string name="menu_settings">Settings</string>
     
     
     <!-- Main Activity -->
-    <string name="main_activyty_title">Market Plan</string>
-    <string name="supermarket_city">City:</string>
-    <string name="supermarket_name">Supermarket:</string>
-    <string name="supermarket_address">Addres:</string>
+    <string name="main_activyty_title">Supermarket Plan</string>
+    <string name="supermarket_city">City</string>
+    <string name="supermarket_name">Supermarket</string>
+    <string name="supermarket_address">Addres</string>
     <string name="button_show">Show</string>
     
 </resources>

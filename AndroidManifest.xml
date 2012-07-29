@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.market_plan"
+    package="com.example.supermarket_plan"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.supermarket_plan.MainActivity"
             android:label="@string/main_activyty_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
