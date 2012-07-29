@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="cities">
+        <item>Kyiv</item>
+        <item>Lviv</item>
+        <item>VeryLongCityName</item>
+    </string-array>
+</resources>

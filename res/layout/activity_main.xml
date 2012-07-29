@@ -1,12 +1,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <TextView
-        android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/main_background">
+    
+    <TextView 
+        android:id="@+id/main_activity_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        android:textSize="30dp" />
+        android:layout_gravity="center_horizontal"
+        android:text="@string/main_activyty_title"
+        android:typeface="serif"
+        android:textSize="24dp"/>
+    
+    <TextView 
+        android:id="@+id/supermarket_city_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_large"
+        android:text="@string/supermarket_city"
+        android:typeface="serif"
+        android:textSize="24dp"/>
+    
+    <Spinner
+        android:id="@+id/supermarket_city_spinner"
+        android:minWidth="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:prompt="@string/supermarket_city" 
+        android:entries="@array/cities"/>
+    
+     <TextView 
+        android:id="@+id/supermarket_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="@string/supermarket_name"
+        android:typeface="serif"
+        android:textSize="24dp"/>
+    
+    <Spinner
+        android:id="@+id/supermarket_name_spinner"
+        android:minWidth="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:prompt="@string/supermarket_name" 
+        android:entries="@array/cities"/>
+    
+    <TextView 
+        android:id="@+id/supermarket_address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:text="@string/supermarket_address"
+        android:typeface="serif"
+        android:textSize="24dp"/>
+    
+    <Spinner
+        android:id="@+id/supermarket_address_spinner"
+        android:minWidth="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:prompt="@string/supermarket_address" 
+        android:entries="@array/cities"/>
+    
+    <Button 
+        android:id="@+id/button_show"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_large"
+        android:text="@string/button_show"/>
 
 </LinearLayout>
