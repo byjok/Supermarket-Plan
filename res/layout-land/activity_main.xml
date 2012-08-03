@@ -38,8 +38,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/padding_medium"
-                android:clickable="false"
-                android:entries="@array/cities"
                 android:minWidth="160dp"
                 android:prompt="@string/supermarket_city" />
         </TableRow>
@@ -60,7 +58,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/padding_medium"
-                android:entries="@array/cities"
                 android:minWidth="160dp"
                 android:prompt="@string/supermarket_name" />
         </TableRow>
@@ -81,7 +78,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/padding_medium"
-                android:entries="@array/cities"
                 android:minWidth="160dp"
                 android:prompt="@string/supermarket_address" />
         </TableRow>

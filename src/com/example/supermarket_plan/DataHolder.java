@@ -2,6 +2,7 @@ package com.example.supermarket_plan;
 
 public class DataHolder {
 
+	/**********************************************************************************************/
 	private String supermarketCity;
 
 	/**
@@ -19,6 +20,22 @@ public class DataHolder {
 		this.supermarketCity = supermarketCity;
 	}
 
+	private int supermarketCityId;	
+
+	/**
+	 * @return the supermarketCityId
+	 */
+	public int getSupermarketCityId() {
+		return supermarketCityId;
+	}
+
+	/**
+	 * @param supermarketCityId the supermarketCityId to set
+	 */
+	public void setSupermarketCityId(int supermarketCityId) {
+		this.supermarketCityId = supermarketCityId;
+	}
+	/**********************************************************************************************/	
 	private String supermarketName;
 
 	/**
@@ -35,7 +52,23 @@ public class DataHolder {
 	public void setSupermarketName(String supermarketName) {
 		this.supermarketName = supermarketName;
 	}
+	
+	private int supermarketNameId;
 
+	/**
+	 * @return the supermarketNameId
+	 */
+	public int getSupermarketNameId() {
+		return supermarketNameId;
+	}
+
+	/**
+	 * @param supermarketNameId the supermarketNameId to set
+	 */
+	public void setSupermarketNameId(int supermarketNameId) {
+		this.supermarketNameId = supermarketNameId;
+	}
+	/**********************************************************************************************/
 	private String supermarketAddress;
 
 	/**
