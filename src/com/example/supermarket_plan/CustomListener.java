@@ -24,32 +24,38 @@ public class CustomListener implements OnItemSelectedListener, OnClickListener {
 
 		Spinner spinner = (Spinner) parent;
 		String optionName = spinner.getPrompt().toString(); // City,Supermarket,Address
-		Cursor selectedItem = (Cursor)spinner.getSelectedItem();
+		Cursor selectedItem = (Cursor) spinner.getSelectedItem();
 		selectedItem.moveToPosition(pos);
-		
+
 		int _id = selectedItem.getInt(0);
 		String value = selectedItem.getString(1);
 
 		switch (spinner.getId()) {
-		case R.id.supermarket_city_spinner:
-			if (dataHolder.getSupermarketCity() != value) {
-				dataHolder.setSupermarketCity(value); // city_name
-				dataHolder.setSupermarketCityId(_id); // _id
-				adapterHelper.setSupermarketAdapter();
+		case R.id.city_spinner:
+			if (!dataHolder.getCity().equalsIgnoreCase(value)) {
+				dataHolder.setCity(value); // city_name
+				dataHolder.setCityId(_id); // _id
+				dataHolder.setCityPos(pos);
+				dataHolder.setSupermarketPos(0);
+				dataHolder.setAddressPos(0);
 				Log.d(TAG, "onItemSelected: " + optionName + " " + value);
 			}
+			adapterHelper.setSupermarketAdapter();
 			break;
-		case R.id.supermarket_name_spinner:
-			if (dataHolder.getSupermarketName() != value) {
-				dataHolder.setSupermarketName(value);
-				dataHolder.setSupermarketNameId(_id);
-				adapterHelper.setAddressAdapter();
+		case R.id.supermarket_spinner:
+			if (!dataHolder.getSupermarket().equalsIgnoreCase(value)) {
+				dataHolder.setSupermarket(value);
+				dataHolder.setSupermarketId(_id);
+				dataHolder.setSupermarketPos(pos);
+				dataHolder.setAddressPos(0);
 				Log.d(TAG, "onItemSelected: " + optionName + " " + value);
 			}
+			adapterHelper.setAddressAdapter();
 			break;
-		case R.id.supermarket_address_spinner:
-			if (dataHolder.getSupermarketAddress() != value) {
-				dataHolder.setSupermarketAddress(value);
+		case R.id.address_spinner:
+			if (!dataHolder.getAddress().equalsIgnoreCase(value)) {
+				dataHolder.setAddress(value);
+				dataHolder.setAddressPos(pos);
 				Log.d(TAG, "onItemSelected: " + optionName + " " + value);
 			}
 			break;
@@ -59,8 +65,6 @@ public class CustomListener implements OnItemSelectedListener, OnClickListener {
 	}
 
 	public void onNothingSelected(AdapterView<?> arg0) {
-		// TODO Auto-generated method stub
-
 	}
 
 	// button show press

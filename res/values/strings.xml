@@ -6,9 +6,9 @@
     
     <!-- Main Activity -->
     <string name="main_activyty_title">Supermarket Plan</string>
-    <string name="supermarket_city">Місто</string>
-    <string name="supermarket_name">Супермаркет</string>
-    <string name="supermarket_address">Адреса</string>
+    <string name="city">Місто</string>
+    <string name="supermarket">Супермаркет</string>
+    <string name="address">Адреса</string>
     <string name="button_show">Показати</string>
     
 </resources>

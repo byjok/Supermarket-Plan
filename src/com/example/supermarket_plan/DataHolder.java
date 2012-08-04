@@ -3,86 +3,136 @@ package com.example.supermarket_plan;
 public class DataHolder {
 
 	/**********************************************************************************************/
-	private String supermarketCity;
+	private String city = "";
 
 	/**
-	 * @return the supermarketCity
+	 * @return the city
 	 */
-	public String getSupermarketCity() {
-		return supermarketCity;
+	public String getCity() {
+		return city;
 	}
 
 	/**
-	 * @param supermarketCity
-	 *            the supermarketCity to set
+	 * @param city
+	 *            the city to set
 	 */
-	public void setSupermarketCity(String supermarketCity) {
-		this.supermarketCity = supermarketCity;
+	public void setCity(String supermarketCity) {
+		this.city = supermarketCity;
 	}
 
-	private int supermarketCityId;	
+	private int cityId;	
 
 	/**
-	 * @return the supermarketCityId
+	 * @return the cityId
 	 */
-	public int getSupermarketCityId() {
-		return supermarketCityId;
-	}
-
-	/**
-	 * @param supermarketCityId the supermarketCityId to set
-	 */
-	public void setSupermarketCityId(int supermarketCityId) {
-		this.supermarketCityId = supermarketCityId;
-	}
-	/**********************************************************************************************/	
-	private String supermarketName;
-
-	/**
-	 * @return the supermarketName
-	 */
-	public String getSupermarketName() {
-		return supermarketName;
+	public int getCityId() {
+		return cityId;
 	}
 
 	/**
-	 * @param supermarketName
-	 *            the supermarketName to set
+	 * @param cityId the cityId to set
 	 */
-	public void setSupermarketName(String supermarketName) {
-		this.supermarketName = supermarketName;
+	public void setCityId(int cityId) {
+		this.cityId = cityId;
 	}
 	
-	private int supermarketNameId;
-
+	private int cityPos;
+	
 	/**
-	 * @return the supermarketNameId
+	 * @return the cityPos
 	 */
-	public int getSupermarketNameId() {
-		return supermarketNameId;
+	public int getCityPos() {
+		return cityPos;
 	}
 
 	/**
-	 * @param supermarketNameId the supermarketNameId to set
+	 * @param cityPos the cityPos to set
 	 */
-	public void setSupermarketNameId(int supermarketNameId) {
-		this.supermarketNameId = supermarketNameId;
+	public void setCityPos(int cityPos) {
+		this.cityPos = cityPos;
 	}
+
+	/**********************************************************************************************/	
+	private String supermarket = "";
+
+	/**
+	 * @return the supermarket
+	 */
+	public String getSupermarket() {
+		return supermarket;
+	}
+
+	/**
+	 * @param supermarket
+	 *            the supermarket to set
+	 */
+	public void setSupermarket(String supermarket) {
+		this.supermarket = supermarket;
+	}
+	
+	private int supermarketId;
+
+	/**
+	 * @return the supermarketId
+	 */
+	public int getSupermarketId() {
+		return supermarketId;
+	}
+
+	/**
+	 * @param supermarketId the supermarketId to set
+	 */
+	public void setSupermarketId(int supermarketId) {
+		this.supermarketId = supermarketId;
+	}
+	
+	private int supermarketPos;
+	
+	/**
+	 * @return the supermarketPos
+	 */
+	public int getSupermarketPos() {
+		return supermarketPos;
+	}
+
+	/**
+	 * @param supermarketPos the supermarketPos to set
+	 */
+	public void setSupermarketPos(int supermarketPos) {
+		this.supermarketPos = supermarketPos;
+	}
+
 	/**********************************************************************************************/
-	private String supermarketAddress;
+	private String address = "";
 
 	/**
-	 * @return the supermarketAddress
+	 * @return the address
 	 */
-	public String getSupermarketAddress() {
-		return supermarketAddress;
+	public String getAddress() {
+		return address;
 	}
 
 	/**
-	 * @param supermarketAddress
-	 *            the supermarketAddress to set
+	 * @param address
+	 *            the address to set
 	 */
-	public void setSupermarketAddress(String supermarketAddress) {
-		this.supermarketAddress = supermarketAddress;
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	private int addressPos;
+
+	/**
+	 * @return the addressPos
+	 */
+	public int getAddressPos() {
+		return addressPos;
+	}
+
+	/**
+	 * @param addressPos the addressPos to set
+	 */
+	public void setAddressPos(int addressPos) {
+		this.addressPos = addressPos;
 	}
 }

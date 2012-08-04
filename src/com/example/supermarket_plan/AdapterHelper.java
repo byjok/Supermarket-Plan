@@ -32,7 +32,7 @@ public class AdapterHelper {
 
 	public SimpleCursorAdapter getSupermarketAdapter() {
 		Cursor cursor = databaseHelper.getSupermarketTable(dataHolder
-				.getSupermarketCityId());
+				.getCityId());
 		String[] from = new String[] { DataBaseHelper.SUPERMARKET_NAME };
 		int[] to = new int[] { android.R.id.text1 }; // from
 														// simple_spinner_dropdown_item
@@ -46,8 +46,8 @@ public class AdapterHelper {
 	@SuppressWarnings("deprecation")
 	public SimpleCursorAdapter getAddressAdapter() {
 		Cursor cursor = databaseHelper.getAddressTable(
-				dataHolder.getSupermarketCityId(),
-				dataHolder.getSupermarketNameId());
+				dataHolder.getCityId(),
+				dataHolder.getSupermarketId());
 		String[] from = new String[] { DataBaseHelper.ADDRESS_NAME };
 		int[] to = new int[] { android.R.id.text1 }; // from
 														// simple_spinner_dropdown_item
@@ -59,19 +59,25 @@ public class AdapterHelper {
 
 	public void setCityAdapter() {
 		((Spinner) (((Activity) context)
-				.findViewById(R.id.supermarket_city_spinner)))
+				.findViewById(R.id.city_spinner)))
 				.setAdapter(getCityAdapter());
 	}
 
 	public void setSupermarketAdapter() {
-		Spinner spinner = (Spinner)((Activity) context).findViewById(R.id.supermarket_name_spinner);
+		Spinner spinner = (Spinner)((Activity) context).findViewById(R.id.supermarket_spinner);
 		spinner.setAdapter(getSupermarketAdapter());
+		if(dataHolder.getSupermarketPos() != 0){
+			spinner.setSelection(dataHolder.getSupermarketPos(), true);
+		}
 		spinner.setEnabled(true);
 	}
 	
 	public void setAddressAdapter() {
-		Spinner spinner = (Spinner)((Activity) context).findViewById(R.id.supermarket_address_spinner);
+		Spinner spinner = (Spinner)((Activity) context).findViewById(R.id.address_spinner);
 		spinner.setAdapter(getAddressAdapter());
+		if(dataHolder.getAddressPos() != 0){
+			spinner.setSelection(dataHolder.getAddressPos(), true);
+		}
 		spinner.setEnabled(true);
 	}
 }
