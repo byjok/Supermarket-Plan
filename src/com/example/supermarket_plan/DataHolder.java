@@ -101,7 +101,6 @@ public class DataHolder {
 	public void setSupermarketPos(int supermarketPos) {
 		this.supermarketPos = supermarketPos;
 	}
-
 	/**********************************************************************************************/
 	private String address = "";
 
@@ -134,5 +133,21 @@ public class DataHolder {
 	 */
 	public void setAddressPos(int addressPos) {
 		this.addressPos = addressPos;
+	}
+	/**********************************************************************************************/
+	private String planPath = "";
+
+	/**
+	 * @return the planPath
+	 */
+	public String getPlanPath() {
+		return planPath;
+	}
+
+	/**
+	 * @param planPath the planPath to set
+	 */
+	public void setPlanPath(String planPath) {
+		this.planPath = planPath;
 	}
 }

@@ -11,4 +11,7 @@
     <string name="address">Адреса</string>
     <string name="button_show">Показати</string>
     
+    <!-- Plan Activity -->
+    <string name="description">Supermarket plan</string>
+    
 </resources>

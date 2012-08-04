@@ -8,10 +8,10 @@ import android.widget.Spinner;
 
 public class AdapterHelper {
 	private Context context;
-	private DataBaseHelper databaseHelper;
+	private DatabaseHelper databaseHelper;
 	private DataHolder dataHolder;
 
-	public AdapterHelper(Context context, DataBaseHelper databaseHelper,
+	public AdapterHelper(Context context, DatabaseHelper databaseHelper,
 			DataHolder dataHolder) {
 		this.context = context;
 		this.databaseHelper = databaseHelper;
@@ -21,7 +21,7 @@ public class AdapterHelper {
 	@SuppressWarnings("deprecation")
 	public SimpleCursorAdapter getCityAdapter() {
 		Cursor cursor = databaseHelper.getCityTable();
-		String[] from = new String[] { DataBaseHelper.CITY_NAME };
+		String[] from = new String[] { DatabaseHelper.CITY_NAME };
 		int[] to = new int[] { android.R.id.text1 }; // from
 														// simple_spinner_dropdown_item
 		SimpleCursorAdapter adapter = new SimpleCursorAdapter(context,
@@ -33,7 +33,7 @@ public class AdapterHelper {
 	public SimpleCursorAdapter getSupermarketAdapter() {
 		Cursor cursor = databaseHelper.getSupermarketTable(dataHolder
 				.getCityId());
-		String[] from = new String[] { DataBaseHelper.SUPERMARKET_NAME };
+		String[] from = new String[] { DatabaseHelper.SUPERMARKET_NAME };
 		int[] to = new int[] { android.R.id.text1 }; // from
 														// simple_spinner_dropdown_item
 		@SuppressWarnings("deprecation")
@@ -48,7 +48,7 @@ public class AdapterHelper {
 		Cursor cursor = databaseHelper.getAddressTable(
 				dataHolder.getCityId(),
 				dataHolder.getSupermarketId());
-		String[] from = new String[] { DataBaseHelper.ADDRESS_NAME };
+		String[] from = new String[] { DatabaseHelper.ADDRESS_NAME };
 		int[] to = new int[] { android.R.id.text1 }; // from
 														// simple_spinner_dropdown_item
 		SimpleCursorAdapter adapter = new SimpleCursorAdapter(context,

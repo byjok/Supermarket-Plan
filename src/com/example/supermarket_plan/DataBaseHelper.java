@@ -12,10 +12,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.Toast;
 
-public class DataBaseHelper extends SQLiteOpenHelper {
-	private static final String TAG = "DataBaseHelper";
+public class DatabaseHelper extends SQLiteOpenHelper {
+	private static final String TAG = "DatabaseHelper";
 
 	private static final int DB_VERSION = 1;
 	private static final String DB_PATH = "/data/data/com.example.supermarket_plan/databases/";
@@ -29,7 +28,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 	private SQLiteDatabase myDataBase;
 
-	public DataBaseHelper(Context context) {
+	public DatabaseHelper(Context context) {
 		super(context, DB_NAME, null, DB_VERSION);
 		this.context = context;
 	}
@@ -132,11 +131,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		cursor.moveToFirst();
 		return cursor.getInt(0);
 	}
-	
-	public String getPlanPath(int cityId, int supermarketId, String supermarketAddress) {
+
+	public String getPlanPath(int cityId, int supermarketId,
+			String supermarketAddress) {
 		Cursor cursor = myDataBase.rawQuery(
-				"select plan_path from address where (city_id = " + cityId + " and supermarket_id = "+
-		+supermarketId + " and address_name = '" + supermarketAddress + "')", null);
+				"select plan_path from address where (city_id = " + cityId
+						+ " and supermarket_id = " + +supermarketId
+						+ " and address_name = '" + supermarketAddress + "')",
+				null);
 		cursor.moveToFirst();
 		return cursor.getString(0);
 	}
@@ -147,6 +149,5 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		Toast.makeText(context, "onUpgrade", Toast.LENGTH_SHORT).show();
 	}
 }
