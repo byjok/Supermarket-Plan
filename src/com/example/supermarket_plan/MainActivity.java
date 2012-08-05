@@ -9,6 +9,7 @@ import android.widget.Spinner;
 import static com.example.supermarket_plan.Constants.CITY;
 import static com.example.supermarket_plan.Constants.SUPERMARKET;
 import static com.example.supermarket_plan.Constants.ADDRESS;
+import static com.example.supermarket_plan.Constants.PLAN_PATH;
 import static com.example.supermarket_plan.Constants.CITY_ID;
 import static com.example.supermarket_plan.Constants.SUPERMARKET_ID;
 import static com.example.supermarket_plan.Constants.CITY_POS;
@@ -62,11 +63,12 @@ public class MainActivity extends Activity {
 		outState.putString(CITY, dataHolder.getCity());
 		outState.putString(SUPERMARKET, dataHolder.getSupermarket());
 		outState.putString(ADDRESS, dataHolder.getAddress());
+		outState.putString(PLAN_PATH, dataHolder.getPlanPath());
 		outState.putInt(CITY_ID, dataHolder.getCityId());
 		outState.putInt(SUPERMARKET_ID, dataHolder.getSupermarketId());
 		outState.putInt(CITY_POS, dataHolder.getCityPos());
 		outState.putInt(SUPERMARKET_POS, dataHolder.getSupermarketPos());
-		outState.putInt(ADDRESS_POS, dataHolder.getAddressPos());
+		outState.putInt(ADDRESS_POS, dataHolder.getAddressPos());		
 	}
 
 	@Override
@@ -92,6 +94,7 @@ public class MainActivity extends Activity {
 			dataHolder
 					.setSupermarket(savedInstanceState.getString(SUPERMARKET));
 			dataHolder.setAddress(savedInstanceState.getString(ADDRESS));
+			dataHolder.setPlanPath(savedInstanceState.getString(PLAN_PATH));
 			dataHolder.setCityId(savedInstanceState.getInt(CITY_ID));
 			dataHolder.setSupermarketId(savedInstanceState
 					.getInt(SUPERMARKET_ID));
