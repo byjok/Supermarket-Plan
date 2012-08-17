@@ -10,8 +10,6 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Spinner;
-import static com.example.supermarket_plan.Constants.CITY_ID;
-import static com.example.supermarket_plan.Constants.SUPERMARKET_ID;
 import static com.example.supermarket_plan.Constants.PLAN_PATH;
 
 public class CustomListener implements OnItemSelectedListener, OnClickListener {
@@ -79,8 +77,6 @@ public class CustomListener implements OnItemSelectedListener, OnClickListener {
 	// button show press
 	public void onClick(View v) {
 		Intent intent = new Intent(context, PlanActivity.class);
-		intent.putExtra(CITY_ID, dataHolder.getCityId());
-		intent.putExtra(SUPERMARKET_ID, dataHolder.getSupermarketId());
 		intent.putExtra(PLAN_PATH, dataHolder.getPlanPath());
 		((Activity)context).startActivity(intent);
 		Log.d(TAG, "onClick \"Show\"");

@@ -18,7 +18,7 @@ import static com.example.supermarket_plan.Constants.ADDRESS_POS;
 
 public class MainActivity extends Activity {
 	private static final String TAG = "MainActivity";
-	
+
 	private DataHolder dataHolder; // contain all data for databaseHelper logic
 	private CustomListener customListener; // listener for Spinners & BUtton
 	private DatabaseHelper databaseHelper;
@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
 		outState.putInt(SUPERMARKET_ID, dataHolder.getSupermarketId());
 		outState.putInt(CITY_POS, dataHolder.getCityPos());
 		outState.putInt(SUPERMARKET_POS, dataHolder.getSupermarketPos());
-		outState.putInt(ADDRESS_POS, dataHolder.getAddressPos());		
+		outState.putInt(ADDRESS_POS, dataHolder.getAddressPos());
 	}
 
 	@Override
